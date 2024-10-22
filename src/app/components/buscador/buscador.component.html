@@ -1,0 +1,18 @@
+<h1 class = "animate__animated animate__flipInX" style="font-family: Britannic, sans-serif;">BUSCANDO <small> "{{termino}}"</small></h1>
+<HR>
+<div class="row ">
+  <div class="alert alert-info" role="alert" *ngIf="prod.length==0">
+    No se encuentra ninguna coincidencia de "{{termino}}"
+  </div>
+  <div class="col" *ngFor="let pr of prod; let i = index">
+    <div class="card" style="width: 18rem;">
+      <img [src]="pr.img" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><strong>{{pr.nombre}}</strong></h5>
+        <p class="card-text" style="text-align: justify;">{{pr.desc}}</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        <a type="button" class="btn btn-outline-primary">Ver más...</a>
+      </div>
+    </div>
+  </div>
+</div>

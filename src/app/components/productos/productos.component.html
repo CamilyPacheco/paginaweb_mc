@@ -1,0 +1,16 @@
+<h1 class="animate__animated animate__flipInX" style="font-family: Britannic, sans-serif;">PRODUCTOS MC</h1>
+<hr>
+<div class="row">
+  <div class="col" *ngFor="let PR of productos; let i = index">
+    <div class="card" style="width: 18rem;">
+      <img [src]="PR.img" class="card-img-top" alt="..." style="height: 200px; object-fit: cover;"> <!-- Ajuste de tamaño de imagen -->
+      <div class="card-body">
+        <h5 class="card-title"><strong>{{PR.nombre}}</strong></h5>
+        <p class="card-text" style="text-align: justify;">{{PR.desc}}</p>
+        <p class="card-text" style="text-align: justify;"> $ <strong>{{PR.precio}}</strong></p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        <a (click)="verprod(i)" type="button" class="btn btn-outline-primary">Ver más...</a>
+      </div>
+    </div>
+  </div>
+</div>
